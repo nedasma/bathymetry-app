@@ -17,6 +17,11 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
+/**
+ * DI module, containing all the necessary modules provided for the login feature package. Note that
+ * HttpClient and database singletons are used in bathymetry package as well, so it could be a subject
+ * of moving to a different, top-level DI module.
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object LoginModule {

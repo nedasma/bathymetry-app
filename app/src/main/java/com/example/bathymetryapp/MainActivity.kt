@@ -19,6 +19,10 @@ import com.example.bathymetryapp.login.ui.LoginScreen
 import com.example.bathymetryapp.ui.theme.BathymetryAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Main activity of the application, where the splash screen is installed, basic app theme and scaffold
+ * is set up together with the Compose navigation elements.
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

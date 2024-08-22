@@ -14,6 +14,10 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.contentType
 
+/**
+ * Implementation class of the [LoginRepository]. Uses Ktor [client] for submitting data to the BE
+ * and app [db] for saving login token and scans locally for future use.
+ */
 class LoginRepositoryImpl(
     private val client: HttpClient,
     private val db: ApplicationDatabase

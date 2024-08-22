@@ -21,6 +21,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.bathymetryapp.login.viewmodel.LoginViewModel
 import kotlinx.coroutines.flow.collectLatest
 
+/**
+ * Displays the UI elements necessary for the user to interact when logging into the application.
+ * [onNavigate] lambda gets called only when the login flow is collected, that is, when the login
+ * data is successfully submitted and the response is received back.
+ */
 @Composable
 fun LoginScreen(
     modifier: Modifier = Modifier,

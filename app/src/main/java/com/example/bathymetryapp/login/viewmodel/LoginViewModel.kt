@@ -4,18 +4,18 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bathymetryapp.login.data.model.LoginDetails
-import com.example.bathymetryapp.login.repository.LoginRepository
 import com.example.bathymetryapp.login.usecase.LoginUseCase
 import com.example.bathymetryapp.util.ServiceResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.math.log
 
+/**
+ * Takes control of the UI state of the LoginScreen. When the button to log in is clicked, the
+ * [loginUseCase] is invoked to pass user email and password to the backend.
+ */
 @HiltViewModel
 class LoginViewModel @Inject constructor(
     private val loginUseCase: LoginUseCase

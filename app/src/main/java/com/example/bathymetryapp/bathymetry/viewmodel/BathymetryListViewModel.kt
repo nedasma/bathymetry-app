@@ -11,6 +11,12 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * Controls the UI state of the BathymetryListScreen. Currently it invokes the [getScansListUseCase]
+ * to retrieve all scans saved for a logged-in user and emits the data back to the UI. All the scans
+ * should be clickable individually, and onScanItemClicked method would be responsible for handling
+ * that.
+ */
 @HiltViewModel
 class BathymetryListViewModel @Inject constructor(
     private val getScansListUseCase: GetScansListUseCase,

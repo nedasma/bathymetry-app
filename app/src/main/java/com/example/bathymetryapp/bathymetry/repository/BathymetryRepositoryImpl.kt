@@ -14,6 +14,10 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.contentType
 
+/**
+ * Implementation class of the [BathymetryRepository]. Uses Ktor [client] for getting the data from
+ * the BE for creating depth maps and app [db] for retrieving a list of saved scans.
+ */
 class BathymetryRepositoryImpl(
     private val client: HttpClient,
     private val db: ApplicationDatabase

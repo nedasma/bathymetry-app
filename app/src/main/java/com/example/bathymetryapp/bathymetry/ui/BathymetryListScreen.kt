@@ -19,6 +19,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.bathymetryapp.bathymetry.viewmodel.BathymetryListViewModel
 
+/**
+ * Displays the list of available scans for a given user.
+ */
 @Composable
 fun BathymetryListScreen(
     modifier: Modifier = Modifier,

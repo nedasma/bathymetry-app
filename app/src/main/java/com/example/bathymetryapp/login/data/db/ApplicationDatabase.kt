@@ -9,6 +9,10 @@ import com.example.bathymetryapp.bathymetry.data.model.Scan
 import com.example.bathymetryapp.login.data.dao.LoginTokenDao
 import com.example.bathymetryapp.login.data.model.LoginToken
 
+/**
+ * Local application database, containing [LoginToken] and [Scan] data classes as entities. Provides
+ * access to DAOs of the entities mentioned.
+ */
 @Database(entities = [LoginToken::class, Scan::class], version = 1, exportSchema = false)
 abstract class ApplicationDatabase : RoomDatabase() {
 
